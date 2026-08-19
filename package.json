@@ -1,0 +1,28 @@
+{
+  "name": "br8n",
+  "version": "0.1.0",
+  "description": "br8n — owned, portable working memory. A plain-files brain template and a tiny MCP server that lets any model read it. Files, not a login.",
+  "type": "module",
+  "bin": { "br8n": "dist/cli.js" },
+  "main": "dist/server.js",
+  "files": ["dist", "template", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/cli.js",
+    "test": "node --test test/*.test.mjs"
+  },
+  "keywords": ["mcp", "model-context-protocol", "ai-memory", "portable-memory", "knowledge-base", "markdown", "br8n", "owned-memory"],
+  "author": "Michael Sebastian (Branded Mayhem Collective)",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/Branded-Mayhem-Collective-LLC/br8n" },
+  "homepage": "https://br8n.io",
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "@types/node": "^20.14.0"
+  }
+}
