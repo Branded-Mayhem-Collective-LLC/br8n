@@ -14,16 +14,14 @@ br8n is the AI delivery practice of [Branded Mayhem Collective](https://brandedm
 ## Use it
 
 ```bash
-git clone https://github.com/Branded-Mayhem-Collective-LLC/br8n
-cd br8n && npm install && npm run build
-cp -r template/brain ~/my-brain        # now write in it
-node dist/cli.js ~/my-brain            # MCP server on stdio
+npx @br8n/mcp ~/my-brain                         # MCP server on stdio (or: npm i -g @br8n/mcp && br8n ~/my-brain)
+# template: git clone https://github.com/Branded-Mayhem-Collective-LLC/br8n && cp -r br8n/template/brain ~/my-brain
 ```
 
 Claude Desktop / Claude Code / Cursor (any MCP client) — add:
 
 ```json
-{ "mcpServers": { "br8n": { "command": "node", "args": ["/path/to/br8n/dist/cli.js", "/path/to/my-brain"] } } }
+{ "mcpServers": { "br8n": { "command": "npx", "args": ["-y", "@br8n/mcp", "/path/to/my-brain"] } } }
 ```
 
 Then ask the model something the brain knows. It answers from the file and names it. Switch the model; same answer, same file.
@@ -48,7 +46,7 @@ MIT © 2026 Branded Mayhem Collective LLC
 ## Publishing (maintainers)
 
 ```bash
-npm login && npm publish --access public          # 1. claims `br8n` on npm; package.json carries mcpName
+npm login && npm publish --access public          # 1. publishes @br8n/mcp (org: br8n); package.json carries mcpName
 mcp-publisher login github                        # 2. GitHub device-flow auth (org member)
 mcp-publisher publish                             # 3. lists io.github.Branded-Mayhem-Collective-LLC/br8n in the official MCP registry
 ```

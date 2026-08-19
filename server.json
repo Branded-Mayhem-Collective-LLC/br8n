@@ -12,9 +12,11 @@
     {
       "registry_type": "npm",
       "registry_base_url": "https://registry.npmjs.org",
-      "identifier": "br8n",
+      "identifier": "@br8n/mcp",
       "version": "0.1.0",
-      "transport": { "type": "stdio" },
+      "transport": {
+        "type": "stdio"
+      },
       "package_arguments": [
         {
           "type": "positional",
