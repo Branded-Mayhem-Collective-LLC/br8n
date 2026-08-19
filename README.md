@@ -44,3 +44,11 @@ The layout and this server are MIT. What br8n charges for is hands on a real ope
 `br8n` on PyPI (a context-capture engine by a different author) is not this project.
 
 MIT © 2026 Branded Mayhem Collective LLC
+
+## Publishing (maintainers)
+
+```bash
+npm login && npm publish --access public          # 1. claims `br8n` on npm; package.json carries mcpName
+mcp-publisher login github                        # 2. GitHub device-flow auth (org member)
+mcp-publisher publish                             # 3. lists io.github.Branded-Mayhem-Collective-LLC/br8n in the official MCP registry
+```
