@@ -1,7 +1,7 @@
 {
   "name": "@br8n/mcp",
-  "mcpName": "io.github.Branded-Mayhem-Collective-LLC/br8n",
-  "version": "0.1.0",
+  "mcpName": "io.br8n/mcp",
+  "version": "0.1.1",
   "description": "br8n \u2014 owned, portable working memory. A plain-files brain template and a tiny MCP server that lets any model read it. Files, not a login.",
   "type": "module",
   "bin": {
