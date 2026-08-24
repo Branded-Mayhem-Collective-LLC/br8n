@@ -45,8 +45,22 @@ MIT © 2026 Branded Mayhem Collective LLC
 
 ## Publishing (maintainers)
 
+Configure npm's trusted publisher once for `@br8n/mcp`:
+
+- Publisher: GitHub Actions
+- Organization: `Branded-Mayhem-Collective-LLC`
+- Repository: `br8n`
+- Workflow: `publish.yml`
+- Allowed action: `npm publish`
+
+Publish the version already committed to `main`, then update the official MCP Registry:
+
 ```bash
-npm login && npm publish --access public          # 1. publishes @br8n/mcp (org: br8n); package.json carries mcpName
-mcp-publisher login github                        # 2. GitHub device-flow auth (org member)
-mcp-publisher publish                             # 3. lists io.br8n/mcp in the official MCP registry
+gh workflow run publish.yml --ref main -f version=0.1.2
+gh run watch --exit-status
+
+mcp-publisher login github
+mcp-publisher publish
 ```
+
+The GitHub-hosted workflow uses npm trusted publishing (OIDC), so it requires no long-lived npm token. Change the version argument for future releases.
