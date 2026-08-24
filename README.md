@@ -48,5 +48,5 @@ MIT © 2026 Branded Mayhem Collective LLC
 ```bash
 npm login && npm publish --access public          # 1. publishes @br8n/mcp (org: br8n); package.json carries mcpName
 mcp-publisher login github                        # 2. GitHub device-flow auth (org member)
-mcp-publisher publish                             # 3. lists io.github.Branded-Mayhem-Collective-LLC/br8n in the official MCP registry
+mcp-publisher publish                             # 3. lists io.br8n/mcp in the official MCP registry
 ```

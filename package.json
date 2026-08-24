@@ -1,7 +1,7 @@
 {
   "name": "@br8n/mcp",
   "mcpName": "io.br8n/mcp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "br8n \u2014 owned, portable working memory. A plain-files brain template and a tiny MCP server that lets any model read it. Files, not a login.",
   "type": "module",
   "bin": {
@@ -17,8 +17,9 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "start": "node dist/cli.js",
+    "pretest": "npm run build",
     "test": "node --test test/*.test.mjs",
-    "prepublishOnly": "npm run build && npm test"
+    "prepublishOnly": "npm test"
   },
   "keywords": [
     "mcp",
